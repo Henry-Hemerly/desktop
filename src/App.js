@@ -1,11 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Memory from './components/Memory'
+
+const createMemoryGame = () => {
+  return <Memory></Memory>
+}
 
 function App() {
   return (
     <div className="App">
       <div className="top-bar">
+        <img className="icons" src={require(`./images/memory/icon.png`)} onClick={createMemoryGame}/>
+        <img className="icons" src={require(`./images/chat/icon.png`)} />
       </div>
       <header className="App-header">
         <p>
