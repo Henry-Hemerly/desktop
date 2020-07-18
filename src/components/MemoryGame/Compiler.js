@@ -13,7 +13,28 @@ class Compiler extends Component {
     end: false
   }
 
-  playerName = (name) => {
-    this.state({ player: name})
+  playerName = (name, boolean) => {
+    this.state({ player: name, start: boolean})
+  }
+
+  finishGame = () => {
+    if (end) {
+      this.setState({
+        end: boolean, score: this.state.score++});
+    } else {
+      this.setState({
+        end: boolean });
+    }
+  }
+
+  render() {
+    return (
+      <>
+        {start ? <Welcome name={this.playerName}/> : null}
+        {end ? <Outputs new={this.finishGame}/> : null}
+        <UI name={name} score={score} />
+        <Game end={this.finishGame} />
+      </>
+    )
   }
 }
