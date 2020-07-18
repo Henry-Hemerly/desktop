@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Memory from './components/Memory'
+import MemoryGame from './components/MemoryGame/Mem'
 
 const createMemoryGame = () => {
   return <Memory></Memory>
@@ -10,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <div className="top-bar">
-        <img className="icons" src={require(`./images/memory/icon.png`)} onClick={createMemoryGame}/>
-        <img className="icons" src={require(`./images/chat/icon.png`)} />
+        <img className="icons" alt="Memory Game Icon" src={require(`./images/memory/icon.png`)} onClick={createMemoryGame}/>
+        <img className="icons" alt="Chat Icon" src={require(`./images/chat/icon.png`)} />
       </div>
       <header className="App-header">
         <p>
@@ -26,6 +27,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <MemoryGame />
     </div>
   );
 }
