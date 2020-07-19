@@ -28,6 +28,9 @@ class Welcome extends Component {
               />
               <div class="form-text text-muted">Welcome to Salt's Memory Game!</div>
             </div>
+            <button onClick={this.clickHandler} className="btn btn-primary">
+              Start
+            </button>
           </form>
         </div>
       </div>
